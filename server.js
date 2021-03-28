@@ -21,11 +21,16 @@ app.use("*", notFoundHandler);
 
 
 // Functions
-
+/**
+ * This function will run when requesting the home routes "/".
+ */
 function handleHome(req, res) {
   res.send("Hello World");
 }
 
+/**
+ * This function will run when requesting the "/bad" route.
+ */
 function handleError(req, res) {
   throw new Error("Something went wrong");
 }
@@ -37,6 +42,11 @@ module.exports = {
   start: start
 }
 
+/**This will listen to the Server
+ * @param {number} port
+ * @example 
+ * start(port)
+ */
 
 // Listening to the Server
 function start(port) {
