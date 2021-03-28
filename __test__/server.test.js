@@ -15,7 +15,7 @@ const request = supertest(server.app);
 
 describe("Server is running", () => {
   it("handle invalid routes", async() => {
-    const response = await request.get("/boo");
+    const response = await request.get("/foo");
     expect(response.status).toEqual(404);
   });
   it("handle server error", async() => {
